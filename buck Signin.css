@@ -1,0 +1,38 @@
+body{
+    background-color: #D2E3C8;
+
+}
+.signin{
+    text-align: center;
+    border-radius: 12px 50px;
+    border-top-left-radius:20px; ;
+    background-color:#3d5a80;
+    margin-top: 100px;
+    width:300px;
+    height:320px;
+    margin-left: 500px;
+    cursor: pointer;
+    line-height: 40px;
+    color:white;
+    
+}
+.buck{
+    text-align: center;
+    color: rgb(82, 82, 228);
+    font-size: 80px;
+    margin-bottom: -45px;
+    
+}
+.create {
+    padding-top: 30px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.image{
+	width:85px;
+	height:85px;
+	margin-bottom:-20px;
+    margin-top: -85px;
+	margin-left:499px;
+	
+}

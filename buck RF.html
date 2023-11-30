@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Buck Registration Form</title>
+    <meta charset="utf-8">
+    <meta name="author" content="sai">
+    <meta name="author" content="sowji">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="buck RF.css">
+    <meta name="" content="Social Media Platform for Artists and Creatives">
+    <link rel="icon" href="buck.png" type="image/x-icon">
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --purple: #5E0AC4;
+            --lightgrey: #959595;
+
+    </style>
+</head>
+
+<body>
+    <img src="buck.png" class="image">
+
+    <h1 style="text-shadow: 2px 2px 4px;">WELCOME TO BUCK</h1>
+    <h6 class="pichi">Social Media Platform For Artists and Creatives</h6>
+    <hr style="5px solid ">
+    <div class="form-area-outer">
+
+        <div class="form-area-inner">
+            <form action="phone.html" method="post" id="myform">
+                <h3 id="asd"></h3>
+                <fieldset style="text-align: center;">
+                    <label for="first-name">First Name: <input id="first_name" type="text"placeholder="First Name"
+                            required></input></label>
+                    <label for="last-name">Last Name: <input id="last_name" type="text" placeholder="Last Name"
+                            required></input></label>
+                    
+                    <label for="age">Date of Birth : <input id="age" type="date" min="13" max="120" /></label>
+                    
+                    <label for="phone_no">Enter Your phone no: <input id="phone_no" type="number" maxlength=10
+                            required></input></label
+                    <label for="password" name="password">Enter Your Password: <input id="password" type="password" placeholder="Enter Password"
+                            required maxlength=8></label>
+                  
+                    <label for="password" name="password">Confirm Your Password: <input id="password" type="password" placeholder="Confirm Password"
+                            required maxlength=8></input></label>
+                    <div class="gender">
+                        <h3 class="gender"> Gender:</h3>
+                        <label id="sri"><input type="radio" name="gender" />Male</label>
+                        <label id="sri"><input type="radio" name="gender" />Female</label>
+                    </div>
+                    <div class="account">
+                        <h3 class="Account_type">Account Type:</h3>
+                        <label id="sai"><input type="radio" c name="account_type" />Personal Account</label>
+                        <label id="sai"><input type="radio" name="account_type" />Proffesional Account</label>
+                    </div>
+                    <div class="submit">
+                        <label for="Profile-picture">Upload Your Profile Photo: <input type="file" required
+                                id="Profile-picture" /><label>
+                                <label for="refferer">How do you hear about us:
+                                    <select id="refferer" required>
+                                        <option>Select one</option>
+                                        <option>News Paper</option>
+                                        <option>BY friends</option>
+                                        <option>Whatsapp</option>
+                                        <option>Instagram</option>
+                                        <option>Any other social media</option>
+                                    </Select>
+                                     
+                                      
+                                        <script>
+                                            const image =document.querySelector("img"),
+                                            input = document.querySelector("input");
+                                        
+                                            input.addEventListener("change", () => {
+                                                image.src=URL.createObjectURL(input.files[0])
+                                            });
+                                        </script>
+                    
+                                <label><input type="checkbox" required class="terms" checked />I accept the<a
+                                        href="buck terms.html"> terms and conditions</a> </label>
+                                <input type="submit" value="Submit" class="subm" />
+                    </div>
+                    <label class="signin">Aleardy have an Account <a href="buck signin.html">Sign in</a><label>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <!--<script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit' , (e) => {
+            e.preventDefault();
+            const fd = new FormData(form);
+            const obj = Object.fromEntries(fd);
+
+             const json = JSON.stringify(obj);
+            localStorage.setItem('form',json)
+
+            window.location.href = "buck home profile.html"
+            ;
+            })
+    </script>-->
+    <script src="buck RF-2.js"></script>
+    <script>
+        if (annyang) {
+            // Let's define our first command. First the text we expect, and then the function it should call
+            var commands = {
+
+                'night mode': function () {
+                    let root = document.documentElement;
+                    root.style.setProperty('--white', '#000');
+                    root.style.setProperty('--black', '#fff');
+                },
+                'day mode': function () {
+                    let root = document.documentElement;
+                    root.style.setProperty('--white', '#fff');
+                    root.style.setProperty('--black', '#000');
+                },
+                'write firstname *tag': function (variable) {
+                    let first_name = document.getElementById("first_name");
+                    first_name.value = variable;
+                },
+                'write lastname *tag': function (variable) {
+                    let last_name = document.getElementById("last_name");
+                    last_name.value = variable;
+                },
+                'write fullname *tag': function (variable) {
+                    let fullname = document.getElementById("fullname");
+                    fullname.value = variable;
+                },
+                'write email *tag': function (variable) {
+                    let emailadd = document.getElementById("emailadd");
+                    emailadd.value = variable.split(" ").jion("");
+                },
+                'write phone no *tag': function (variable) {
+                    let phone_no = document.getElementById("phone_no");
+                    phone_no.value = variable;
+                },
+                'write bio *tag': function (variable) {
+                    let bio = document.getElementById("bio");
+                    bio.value = variable;
+                },
+                'submit form': function () {
+                    let myform = document.getElementById("myform");
+                    let formareainner = document.querySelector(".form-area-inner");
+                    let heading = document.querySelector('.form-area-inner');
+                    myform.remove();
+                    heading.innerHTML = "Successful Registered";
+                    let html = '';
+                    html += `<p>You Will Recieve Your Username and Password to your email</p>`;
+                    formareainnerd
+                    
+                    .innerHTML = html;
+
+                },
+
+            }
+        };
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Start listening. You can call this here, or attach this call to an event, button, etc.
+        annyang.start();
+
+
+    </script>
+</body>
+
+</html>
